@@ -19,7 +19,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'Kevin Ridgway',
-    company: 'Senior Engineer, Synacor',
+    company: 'Senior Engineer in TV/Video, Synacor',
     twitter: '@program247365',
     www: 'http://kevinridgway.com',
     github: 'http://github.com/program247365'
@@ -32,4 +32,3 @@ var SLIDE_CONFIG = {
     github: 'http://github.com/you'
   }*/]
 };
-
