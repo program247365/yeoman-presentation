@@ -9,6 +9,15 @@
 
 /* Custom Styles for my presentation */
 
+article {
+    ul {
+        li {
+            color: #353535;
+            font-size: 40px;
+        }
+    }
+}
+
 .slide-one {
 	text-align: center;
 	img{
@@ -21,4 +30,20 @@
 		padding: 15px;
 		width: 100%;
 	}
+}
+
+.slide-two{
+    article {
+        &:after{
+            background: url("/images/yeoman-large-manager.png") no-repeat 120% 30%;
+            content: "";
+            opacity: 0.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    }
 }
