@@ -37,6 +37,7 @@
   <slide class="slide-two">
     <hgroup>
       <h2>What is Yeoman?</h2>
+      <h3>site can be found here: <a href="http://yeoman.io/">yeoman.io</a>
     </hgroup>
     <article>
       <ul class="build">
@@ -49,6 +50,7 @@
           <li><strong>Build:</strong> Compresses images, concatenates and minifies scripts, and stylesheets, recompiles SASS/CoffeeScript, lints JS, uses revision names for files for a final build of your app</li>
         </ul>
       </ul>
+      <p>For installation, and requirements: <a href="https://github.com/yeoman/yeoman/wiki/Manual-Install">Installing Yeoman</a> Note: Yeoman requires Node 0.8.x currently.</p>
     </article>
   </slide>
 
@@ -127,8 +129,8 @@
   <article>
     <p></p>
     <ul class="build">
-      <li>A preview server on port 3501 that allows you to access a running version of your application locally.</li>
-      <li>It also automatically fires up the yeoman watch process, so changes to any of the applications files cause the browser to refresh via LiveReload.</li>
+      <li>Server on port 3501 that allows you to access a running version of your application locally</li>
+      <li>Also changes to any of the applications files cause the browser to refresh via LiveReload</li>
       <li>Any changes to CoffeeScript or Compass files result in them being recompiled</li>
       <li>
         <p>Accessing Server in Yeoman:</p>
@@ -143,39 +145,58 @@
     </ul>
   </article>
 </slide>
-<!-- EcmaScript 6 Modules And Module Support: https://github.com/yeoman/yeoman/blob/master/docs/cli/modules.md using Require JS 
-https://github.com/program247365/yeoman-presentation
 
--->
-<!--   <slide>
-    <hgroup>
-      <h2>Slide with Iframe</h2>
-    </hgroup>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
+<slide>
+<hgroup>
+  <h2>Yeoman Can Build For You</h2>
+  <h3>also built with <a href="http://gruntjs.com/">Grunt.js</a>, that compresses, optimizes and tests.</h3>
+</hgroup>
+<article>
+  <ul class="build">
+    <li>Lints all JavaScript files against JSHint</li>
+    <li>Recompiles all CoffeeScript and SASS files for production</li>
+    <li>Uses r.js to compile and optimize any AMD modules</li>
+    <li>Concatenates and minifies all scripts and stylesheets</li>
+    <li>Compresses images using OptiPNG for PNG files and JPEGtran-turbo for JPEGs</li>
+    <li>Runs unit tests written against a headless WebKit browser (via PhantomJS)</li>
+    <li>Creates an Application Cache manifest via Confess.js</li>
+    <li>
+      <p>Accessing Build in Yeoman:</p>
+      <pre class="prettyprint" data-lang="bash">
+            yeoman build:dist # builds an optimized final version of app
+            yeoman server:dist # serves an optimized final version of app
+      </pre>
+    </li>
+    <li>Demo time</li>
+  </ul>
+</article>
+</slide>
 
-  <slide>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide> -->
+<slide>
+<hgroup>
+  <h2>Yeoman at Synacor</h2>
+  <h3>how can we use it here?</h3>
+</hgroup>
+<article>
+  <ul>
+    <li>For rapidly prototyping front ends locally, and experimenting</li>
+    <li>Create your own generator, perhaps for often used (portal) components? See: <a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">Generators Documentation</a> for further info</li>
+    <pre class="prettyprint" data-lang="bash">
+          yeoman init Portal:portal-weather-widget #??
+    </pre>
+    <li>Yeoman is young! <a href="https://github.com/yeoman/yeoman/#contribute">Let's contribute!</a></li>
+    <img class="footer-image vcenter" src="/images/yeoman-large-footer.png"/>
+</article>
+</slide>
 
-  <slide class="thank-you-slide segue nobackground">
+  <slide class="thank-you-slide" style="background: url(/images/yeoman-large-done.png) no-repeat 50% -50px">
     <article class="flexbox vleft auto-fadein">
-      <h2>&lt;Thank You!&gt;</h2>
-      <p>Important contact information goes here.</p>
+      <h2>Questions, or Comments?</h2>
+      <p>This slide deck, was created using <a href="http://code.google.com/p/io-2012-slides/">Google IO Slides</a>, and is an actual Yeoman project itself, which you can find the source for on GitHub: <a href="https://github.com/program247365/yeoman-presentation">program247365 / yeoman-presentation</a></p>
     </article>
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
     </p>
-  </slide>
-
-  <slide class="logoslide dark nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo_white.png"></span>
-    </article>
   </slide>
 
   <slide class="backdrop"></slide>
