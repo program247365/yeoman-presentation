@@ -1,223 +1,409 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Introducing Yeoman for Front End Development</title>
-        <meta name="description" content="This project is the slide deck for the presentation I gave on Dec. 4th, 2012, at Synacor.">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="styles/main.css">
-        <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
-        <script data-main="scripts/vendor/io-2012-slides/slides" src="scripts/vendor/io-2012-slides/require-1.0.8.min.js"></script>
-    </head>
-   <body style="opacity: 0">
+<!--[if lt IE 7]>
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+    <![endif]-->
+    <!--[if IE 7]>
+        <html class="no-js lt-ie9 lt-ie8">
+        <![endif]-->
+        <!--[if IE 8]>
+            <html class="no-js lt-ie9">
+            <![endif]-->
+            <!--[if gt IE 8]>
+                <!-->
+                <html class="no-js">
+                <!--<![endif]-->
+                <head>
+                    <meta charset="utf-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                    <title>
+                        Introducing Yeoman for Front End Development
+                    </title>
+                    <meta name="description" content="This project is the slide deck for the presentation I gave on Dec. 4th, 2012, at Synacor.">
+                    <!-- Place favicon.ico and apple-touch-icon.png in the root directory
+                    -->
+                    <meta name="apple-mobile-web-app-capable" content="yes">
+                    <link rel="stylesheet" href="styles/main.css">
+                    <base target="_blank">
+                    <!-- This amazingness opens all links in a new tab. -->
+                    <script data-main="scripts/vendor/io-2012-slides/slides" src="scripts/vendor/io-2012-slides/require-1.0.8.min.js">
+                    </script>
+                </head>
+                <body style="opacity: 0">
+                    <slides class="layout-widescreen">
+                        <slide class="slide-zero fill nobackground" style="background: #e7e4e4 url(/images/yeoman-large-manager.png) no-repeat 50% -50px">
+                            <hgroup>
+                                <h2 class="white">
+                                    Introducing Yeoman
+                                </h2>
+                                <p>
+                                    Yeoman (n) 1. A noble servant, carrying out various duties for the sovereign.
+                                    Associated with hard toil. 2. Your new favorite web application stack and
+                                    development tool.
+                                </p>
+                            </hgroup>
+                        </slide>
+                        <slide class="title-slide segue nobackground slide-one">
+                            <img src="images/yeoman-small-no-title.png">
+                            <!-- The content of this hgroup is replaced programmatically through the
+                            slide_config.json. -->
+                            <hgroup class="auto-fadein">
+                                <h1 data-config-title>
+                                    <!-- populated from slide_config.json -->
+                                </h1>
+                                <h2 data-config-subtitle>
+                                    <!-- populated from slide_config.json -->
+                                </h2>
+                                <p data-config-presenter>
+                                    <!-- populated from slide_config.json -->
+                                </p>
+                            </hgroup>
+                        </slide>
+                        <slide class="slide-two">
+                            <hgroup>
+                                <h2>
+                                    What is Yeoman?
+                                </h2>
+                                <h3>
+                                    site can be found here:
+                                    <a href="http://yeoman.io/">yeoman.io</a>
+                            </hgroup>
+                            <article>
+                                <ul class="build">
+                                    <li>
+                                        A command line tool for front-end development, that offers an improved
+                                        tooling workflow in one easy CLI
+                                    </li>
+                                    <ul class="build">
+                                        <li>
+                                            <strong>
+                                                Generate:
+                                            </strong>
+                                            Quickly get you started with scaffolding with popular MVC JS frameworks,
+                                            Twitter Bootstrap, and HTML5 Boilerplate
+                                        </li>
+                                        <li>
+                                            <strong>
+                                                Manage:
+                                            </strong>
+                                            Manage, install, update project dependencies
+                                        </li>
+                                        <li>
+                                            <strong>
+                                                Test:
+                                            </strong>
+                                            Built in JS testing frameworks, run by PhantomJS (or Testacular)
+                                        </li>
+                                        <li>
+                                            <strong>
+                                                Serve:
+                                            </strong>
+                                            Built in local HTTP server with Livereload capabilities for fast development
+                                        </li>
+                                        <li>
+                                            <strong>
+                                                Build:
+                                            </strong>
+                                            Compresses images, concatenates and minifies scripts, and stylesheets,
+                                            recompiles SASS/CoffeeScript, lints JS, uses revision names for files for
+                                            a final build of your app
+                                        </li>
+                                    </ul>
+                                </ul>
+                                <p>
+                                    For installation, and requirements:
+                                    <a href="https://github.com/yeoman/yeoman/wiki/Manual-Install">Installing Yeoman</a>
+                                    Note: Yeoman requires Node 0.8.x currently.
+                                </p>
+                            </article>
+                        </slide>
+                        <slide>
+                            <hgroup>
+                                <h2>
+                                    Yeoman Can Generate Projects For You
+                                </h2>
+                                <h3>
+                                    built on top of
+                                    <a href="http://gruntjs.com/">Grunt.js</a>
+                                </h3>
+                            </hgroup>
+                            <article>
+                                <p>
+                                </p>
+                                <ul class="build">
+                                    <li>
+                                        Generator templates allow you to scaffold out a project using a custom
+                                        setup of boilerplates, frameworks and dependencies.
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">A robust API</a>
+                                        , to create your own generators
+                                    </li>
+                                    <pre class="prettyprint" data-lang="bash">
+                                        yeoman init quickstart # Skip our questions and get a H5BP, jQuery and
+                                        Modernizr base # And many more...Built in project generators: #
+                                        <a href="http://angularjs.org/">Angular.js</a>
+                                        ,
+                                        <a href="http://backbonejs.org/">Backbone.js</a>
+                                        ,
+                                        <a href="http://emberjs.com/">Ember.js</a>
+                                        ,
+                                        <a href="http://visionmedia.github.com/mocha/">Mocha</a>
+                                        ,
+                                        <a href="http://vojtajina.github.com/testacular/">Testacular</a>
+                                    </pre>
+                                    <li>
+                                        <a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">A robust API, to create your own generators</a>
+                                    </li>
+                                    <li>
+                                        Demo time
+                                    </li>
+                                </ul>
+                            </article>
+                        </slide>
+                        <slide>
+                            <hgroup>
+                                <h2>
+                                    Yeoman Can Manage Dependencies For You
+                                </h2>
+                                <h3>
+                                    with
+                                    <a href="http://twitter.github.com/bower/">Bower</a>
+                                    from Twitter
+                                </h3>
+                            </hgroup>
+                            <article>
+                                <p>
+                                </p>
+                                <ul class="build">
+                                    <li>
+                                        Bower is a package manager for the web. Bower lets you easily install
+                                        assets such as images, CSS and JavaScript, and manages dependencies for
+                                        you.
+                                    </li>
+                                    <li>
+                                        In Bower, dependencies are listed in a ‘component.json’ file, similar
+                                        to Node’s package.json or the Ruby Gemfile. This is useful for locking
+                                        down the dependencies a project has.
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Accessing Bower in Yeoman:
+                                        </p>
+                                        <pre class="prettyprint" data-lang="bash">
+                                            yeoman search
+                                            <package-name>
+                                                #search for packages yeoman install
+                                                <package-name>
+                                                    #install a package by name yeoman update
+                                                    <package-name>
+                                                        #update packages in your project to lastest versions
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        Demo time
+                                    </li>
+                                </ul>
+                            </article>
+                        </slide>
+                        <slide>
+                            <hgroup>
+                                <h2>
+                                    Yeoman Can Test For You
+                                </h2>
+                                <h3>
+                                    with
+                                    <a href="http://visionmedia.github.com/mocha/">Mocha</a>
+                                    (or
+                                    <a href="http://pivotal.github.com/jasmine/">Jasmine</a>
+                                    ), using
+                                    <a href="http://phantomjs.org/">PhantomJS</a>
+                                </h3>
+                            </hgroup>
+                            <article>
+                                <p>
+                                </p>
+                                <ul class="build">
+                                    <li>
+                                        By default Yeoman runs a Mocha test harness in a headless instance of
+                                        PhantomJS.
+                                    </li>
+                                    <li>
+                                        When you generate a new project using yeoman init, yeoman also scaffolds
+                                        out a basic set of Mocha unit tests that you can continue using to test
+                                        your application.
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Accessing PhantomJS in Yeoman:
+                                        </p>
+                                        <pre class="prettyprint" data-lang="bash">
+                                            yeoman test # run your tests yeoman server # will watch for changes, and
+                                            run your tests for you! yeoman init --test-framework jasmine #Start with
+                                            Jasmine instead of Mocha
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        Demo time
+                                    </li>
+                                </ul>
+                            </article>
+                        </slide>
+                        <slide>
+                            <hgroup>
+                                <h2>
+                                    Yeoman Can Serve For You
+                                </h2>
+                                <h3>
+                                    using a built in
+                                    <a href="http://nodejs.org/">Node.js</a>
+                                    server locally
+                                </h3>
+                            </hgroup>
+                            <article>
+                                <p>
+                                </p>
+                                <ul class="build">
+                                    <li>
+                                        Server on port 3501 that allows you to access a running version of your
+                                        application locally
+                                    </li>
+                                    <li>
+                                        Also changes to any of the applications files cause the browser to refresh
+                                        via LiveReload
+                                    </li>
+                                    <li>
+                                        Any changes to CoffeeScript or Compass files result in them being recompiled
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Accessing Server in Yeoman:
+                                        </p>
+                                        <pre class="prettyprint" data-lang="bash">
+                                            yeoman server # serve all the things! yeoman server:dist # serves an optimized
+                                            final version of app yeoman server:test # serves up the test suite and
+                                            your app yeoman server:reload # forces server to use standard Livereload
+                                            port: 35729
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        Demo time
+                                    </li>
+                                </ul>
+                            </article>
+                        </slide>
+                        <slide>
+                            <hgroup>
+                                <h2>
+                                    Yeoman Can Build For You
+                                </h2>
+                                <h3>
+                                    also built with
+                                    <a href="http://gruntjs.com/">Grunt.js</a>
+                                    , that compresses, optimizes and tests.
+                                </h3>
+                            </hgroup>
+                            <article>
+                                <ul class="build">
+                                    <li>
+                                        Lints all JavaScript files against JSHint
+                                    </li>
+                                    <li>
+                                        Recompiles all CoffeeScript and SASS files for production
+                                    </li>
+                                    <li>
+                                        Uses r.js to compile and optimize any AMD modules
+                                    </li>
+                                    <li>
+                                        Concatenates and minifies all scripts and stylesheets
+                                    </li>
+                                    <li>
+                                        Compresses images using OptiPNG for PNG files and JPEGtran-turbo for JPEGs
+                                    </li>
+                                    <li>
+                                        Runs unit tests written against a headless WebKit browser (via PhantomJS)
+                                    </li>
+                                    <li>
+                                        Creates an Application Cache manifest via Confess.js
+                                    </li>
+                                    <li>
+                                        <p>
+                                            Accessing Build in Yeoman:
+                                        </p>
+                                        <pre class="prettyprint" data-lang="bash">
+                                            yeoman build:dist # builds an optimized final version of app yeoman server:dist
+                                            # serves an optimized final version of app
+                                        </pre>
+                                    </li>
+                                    <li>
+                                        Demo time
+                                    </li>
+                                </ul>
+                            </article>
+                        </slide>
+                        <slide>
+                            <hgroup>
+                                <h2>
+                                    Yeoman at Synacor
+                                </h2>
+                                <h3>
+                                    how can we use it here?
+                                </h3>
+                            </hgroup>
+                            <article>
+                                <ul>
+                                    <li>
+                                        For rapidly prototyping front ends locally, and experimenting
+                                    </li>
+                                    <li>
+                                        Create your own generator, perhaps for often used (portal) components?
+                                        See:
+                                        <a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">Generators Documentation</a>
+                                        for further info
+                                    </li>
+                                    <pre class="prettyprint" data-lang="bash">
+                                        yeoman init Portal:portal-weather-widget #??
+                                    </pre>
+                                    <li>
+                                        Yeoman is young!
+                                        <a href="https://github.com/yeoman/yeoman/#contribute">Let's contribute!</a>
+                                    </li>
+                                    <img class="footer-image vcenter" src="/images/yeoman-large-footer.png"
+                                    />
+                            </article>
+                        </slide>
+                        <slide class="thank-you-slide" style="background: url(/images/yeoman-large-done.png) no-repeat 50% -50px">
+                            <article class="flexbox vleft auto-fadein">
+                                <h2>
+                                    Questions, or Comments?
+                                </h2>
+                                <p>
+                                    This slide deck, was created using
+                                    <a href="http://code.google.com/p/io-2012-slides/">Google IO Slides</a>
+                                    , and is an actual Yeoman project itself, which you can find the source
+                                    for on GitHub:
+                                    <a href="https://github.com/program247365/yeoman-presentation">program247365 / yeoman-presentation</a>
+                                </p>
+                            </article>
+                            <p class="auto-fadein" data-config-contact>
+                                <!-- populated from slide_config.json -->
+                            </p>
+                        </slide>
+                        <slide class="backdrop">
+                        </slide>
+                    </slides>
+                    <script>
+                    var _gaq = _gaq || [];
+                    _gaq.push(['_setAccount', 'UA-280141-20']);
+                    _gaq.push(['_trackPageview']);
 
-<slides class="layout-widescreen">
-  <slide class="slide-zero fill nobackground" style="background: #e7e4e4 url(/images/yeoman-large-manager.png) no-repeat 50% -50px">
-    <hgroup>
-      <h2 class="white">Introducing Yeoman</h2>
-      <p>Yeoman (n) 1. A noble servant, carrying out various duties for the sovereign. Associated with hard toil. 2. Your new favorite web application stack and development tool. </p>
-    </hgroup>
-  </slide>
-
-  <slide class="title-slide segue nobackground slide-one">
-    <img src="images/yeoman-small-no-title.png">
-    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
-    <hgroup class="auto-fadein">
-      <h1 data-config-title><!-- populated from slide_config.json --></h1>
-      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
-      <p data-config-presenter><!-- populated from slide_config.json --></p>
-    </hgroup>
-  </slide>
-
-  <slide class="slide-two">
-    <hgroup>
-      <h2>What is Yeoman?</h2>
-      <h3>site can be found here: <a href="http://yeoman.io/">yeoman.io</a>
-    </hgroup>
-    <article>
-      <ul class="build">
-        <li>A command line tool for front-end development, that offers an improved tooling workflow in one easy CLI</li>
-        <ul class="build">
-          <li><strong>Generate:</strong> Quickly get you started with scaffolding with popular MVC JS frameworks, Twitter Bootstrap, and HTML5 Boilerplate</li>
-          <li><strong>Manage:</strong> Manage, install, update project dependencies</li>
-          <li><strong>Test:</strong> Built in JS testing frameworks, run by PhantomJS (or Testacular)</li>
-          <li><strong>Serve:</strong> Built in local HTTP server with Livereload capabilities for fast development</li>
-          <li><strong>Build:</strong> Compresses images, concatenates and minifies scripts, and stylesheets, recompiles SASS/CoffeeScript, lints JS, uses revision names for files for a final build of your app</li>
-        </ul>
-      </ul>
-      <p>For installation, and requirements: <a href="https://github.com/yeoman/yeoman/wiki/Manual-Install">Installing Yeoman</a> Note: Yeoman requires Node 0.8.x currently.</p>
-    </article>
-  </slide>
-
-    <slide>
-    <hgroup>
-      <h2>Yeoman Can Generate Projects For You</h2>
-      <h3>built on top of <a href="http://gruntjs.com/">Grunt.js</a></h3>
-    </hgroup>
-    <article>
-      <p></p>
-      <ul class="build">
-        <li>Generator templates allow you to scaffold out a project using a custom setup of boilerplates, frameworks and dependencies. </li>
-        <li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">A robust API</a>, to create your own generators</li>
-          <pre class="prettyprint" data-lang="bash">
-            yeoman init quickstart # Skip our questions and get a H5BP, jQuery and Modernizr base
-            # And many more...Built in project generators:
-            #<a href="http://angularjs.org/">Angular.js</a>, <a href="http://backbonejs.org/">Backbone.js</a>, <a href="http://emberjs.com/">Ember.js</a>, <a href="http://visionmedia.github.com/mocha/">Mocha</a>, <a href="http://vojtajina.github.com/testacular/">Testacular</a>
-          </pre>
-          <li><a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">A robust API, to create your own generators</a></li>
-        <li>Demo time</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Yeoman Can Manage Dependencies For You</h2>
-      <h3>with <a href="http://twitter.github.com/bower/">Bower</a> from Twitter</h3>
-    </hgroup>
-    <article>
-      <p></p>
-      <ul class="build">
-        <li>Bower is a package manager for the web. Bower lets you easily install assets such as images, CSS and JavaScript, and manages dependencies for you.</li>
-        <li>In Bower, dependencies are listed in a ‘component.json’ file, similar to Node’s package.json or the Ruby Gemfile. This is useful for locking down the dependencies a project has.</li>
-        <li>
-          <p>Accessing Bower in Yeoman:</p>
-          <pre class="prettyprint" data-lang="bash">
-                yeoman search <package-name> #search for packages
-                yeoman install <package-name> #install a package by name
-                yeoman update <package-name> #update packages in your project to lastest versions
-          </pre>
-        </li>
-        <li>Demo time</li>
-      </ul>
-    </article>
-  </slide>
-
-    <slide>
-    <hgroup>
-      <h2>Yeoman Can Test For You</h2>
-      <h3>with <a href="http://visionmedia.github.com/mocha/">Mocha</a> (or <a href="http://pivotal.github.com/jasmine/">Jasmine</a>), using <a href="http://phantomjs.org/">PhantomJS</a></h3>
-    </hgroup>
-    <article>
-      <p></p>
-      <ul class="build">
-        <li>By default Yeoman runs a Mocha test harness in a headless instance of PhantomJS.</li>
-        <li>When you generate a new project using yeoman init, yeoman also scaffolds out a basic set of Mocha unit tests that you can continue using to test your application.</li>
-        <li>
-          <p>Accessing PhantomJS in Yeoman:</p>
-          <pre class="prettyprint" data-lang="bash">
-                yeoman test # run your tests
-                yeoman server # will watch for changes, and run your tests for you!
-                yeoman init --test-framework jasmine #Start with Jasmine instead of Mocha
-          </pre>
-        </li>
-        <li>Demo time</li>
-      </ul>
-    </article>
-  </slide>
-
-  <slide>
-  <hgroup>
-    <h2>Yeoman Can Serve For You</h2>
-    <h3>using a built in <a href="http://nodejs.org/">Node.js</a> server locally</h3>
-  </hgroup>
-  <article>
-    <p></p>
-    <ul class="build">
-      <li>Server on port 3501 that allows you to access a running version of your application locally</li>
-      <li>Also changes to any of the applications files cause the browser to refresh via LiveReload</li>
-      <li>Any changes to CoffeeScript or Compass files result in them being recompiled</li>
-      <li>
-        <p>Accessing Server in Yeoman:</p>
-        <pre class="prettyprint" data-lang="bash">
-              yeoman server # serve all the things!
-              yeoman server:dist # serves an optimized final version of app
-              yeoman server:test # serves up the test suite and your app
-              yeoman server:reload # forces server to use standard Livereload port: 35729
-        </pre>
-      </li>
-      <li>Demo time</li>
-    </ul>
-  </article>
-</slide>
-
-<slide>
-<hgroup>
-  <h2>Yeoman Can Build For You</h2>
-  <h3>also built with <a href="http://gruntjs.com/">Grunt.js</a>, that compresses, optimizes and tests.</h3>
-</hgroup>
-<article>
-  <ul class="build">
-    <li>Lints all JavaScript files against JSHint</li>
-    <li>Recompiles all CoffeeScript and SASS files for production</li>
-    <li>Uses r.js to compile and optimize any AMD modules</li>
-    <li>Concatenates and minifies all scripts and stylesheets</li>
-    <li>Compresses images using OptiPNG for PNG files and JPEGtran-turbo for JPEGs</li>
-    <li>Runs unit tests written against a headless WebKit browser (via PhantomJS)</li>
-    <li>Creates an Application Cache manifest via Confess.js</li>
-    <li>
-      <p>Accessing Build in Yeoman:</p>
-      <pre class="prettyprint" data-lang="bash">
-            yeoman build:dist # builds an optimized final version of app
-            yeoman server:dist # serves an optimized final version of app
-      </pre>
-    </li>
-    <li>Demo time</li>
-  </ul>
-</article>
-</slide>
-
-<slide>
-<hgroup>
-  <h2>Yeoman at Synacor</h2>
-  <h3>how can we use it here?</h3>
-</hgroup>
-<article>
-  <ul>
-    <li>For rapidly prototyping front ends locally, and experimenting</li>
-    <li>Create your own generator, perhaps for often used (portal) components? See: <a href="https://github.com/yeoman/yeoman/blob/master/docs/cli/generators.md">Generators Documentation</a> for further info</li>
-    <pre class="prettyprint" data-lang="bash">
-          yeoman init Portal:portal-weather-widget #??
-    </pre>
-    <li>Yeoman is young! <a href="https://github.com/yeoman/yeoman/#contribute">Let's contribute!</a></li>
-    <img class="footer-image vcenter" src="/images/yeoman-large-footer.png"/>
-</article>
-</slide>
-
-  <slide class="thank-you-slide" style="background: url(/images/yeoman-large-done.png) no-repeat 50% -50px">
-    <article class="flexbox vleft auto-fadein">
-      <h2>Questions, or Comments?</h2>
-      <p>This slide deck, was created using <a href="http://code.google.com/p/io-2012-slides/">Google IO Slides</a>, and is an actual Yeoman project itself, which you can find the source for on GitHub: <a href="https://github.com/program247365/yeoman-presentation">program247365 / yeoman-presentation</a></p>
-    </article>
-    <p class="auto-fadein" data-config-contact>
-      <!-- populated from slide_config.json -->
-    </p>
-  </slide>
-
-  <slide class="backdrop"></slide>
-
-</slides>
-
-<script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
-
-<!--[if IE]>
-  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-  <script>CFInstall.check({mode: 'overlay'});</script>
-<![endif]-->
-</body>
-</html>
+                    (function() {
+                        var ga = document.createElement('script');
+                        ga.type = 'text/javascript';
+                        ga.async = true;
+                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(ga, s);
+                    })();
+                    </script>
+                </body>
+                </html>
