@@ -14,9 +14,18 @@ article {
     ul {
         li {
             color: #353535;
-            font-size: 40px;
+            font-size: 30px;
         }
     }
+}
+
+.prettyprint{
+    font-size: 20px;
+    width: 100% + 150;
+}
+
+pre {
+    left: -150px;
 }
 
 .slide-zero {
