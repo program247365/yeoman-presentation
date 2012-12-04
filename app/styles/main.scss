@@ -1,6 +1,7 @@
 @import "compass";
 @import "compass/utilities";
 @import "compass/utilities/color";
+@import "compass/css3/text-shadow";
 
 /* Google IO Slides styles */
 @import "io-2012-slides/theme/scss/base";
@@ -15,6 +16,26 @@ article {
             color: #353535;
             font-size: 40px;
         }
+    }
+}
+
+.slide-zero {
+    h2{
+        margin: 0 auto;
+        text-align: center;
+        opacity: .75;
+        -webkit-text-stroke: 4px rgba(0,0,0,.5);
+        font: bold 6em Arial, sans-serif;
+    }
+    p{
+        line-height: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 30px;
+        background: rgba(255,255,255,.75);
+        width:  100%;
+        margin: 0;
     }
 }
 
